@@ -1,0 +1,6 @@
+midi 2 osc
+	combine midi devices + controllers
+	with
+	https://vvvv.org/contribution/vvvv-reaktor-%28or-any-osc%29-interface-based-on-vobject
+	 - or -
+	regular oscsend...
