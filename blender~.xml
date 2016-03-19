@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\blender.v4p" systemname="blender" filename="C:\Code\vvvv\v4j\blender.v4p">
-   <BOUNDS type="Window" left="12735" top="7245" width="9000" height="6000">
+   <PATCH nodename="C:\Code\vvvv\v4j\blender.v4p" systemname="blender" filename="C:\Code\vvvv\v4j\blender.v4p">
+   <BOUNDS type="Window" left="6660" top="8370" width="9000" height="6000">
    </BOUNDS>
    <NODE systemname="Blend (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Mixer\Blend.tfx" nodename="Blend (DX11.TextureFX)" componentmode="Hidden" id="12">
    <BOUNDS type="Node" left="4140" top="3945" width="100" height="100">
@@ -9,17 +9,11 @@
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
-   <PIN pinname="Texture In 2" visible="1">
-   </PIN>
-   <PIN pinname="Texture In" visible="1">
-   </PIN>
-   <PIN pinname="Technique" visible="1">
-   </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="13" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="3420" top="3315" width="2790" height="435">
+   <BOUNDS type="Box" left="3150" top="3300" width="2790" height="435">
    </BOUNDS>
-   <BOUNDS type="Node" left="3420" top="3315" width="0" height="0">
+   <BOUNDS type="Node" left="3150" top="3300" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="-1" pintype="Input" values="0.5">
    </PIN>
@@ -37,7 +31,7 @@
    </PIN>
    <PIN pinname="Slider Constraints" slicecount="1" values="scY">
    </PIN>
-   <PIN pinname="X Input Value" visible="1" pintype="Input" slicecount="1" values="0">
+   <PIN pinname="X Input Value" visible="1" pintype="Input" slicecount="1" values="0.5">
    </PIN>
    <PIN pinname="X Output Value" visible="1" pintype="Output">
    </PIN>
@@ -49,7 +43,7 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="13" srcpinname="X Output Value" dstnodeid="12" dstpinname="Opacity">
-   <LINKPOINT x="4335" y="3690">
+   <LINKPOINT x="4320" y="3720">
    </LINKPOINT>
    </LINK>
    <NODE systemname="FullscreenQuad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\modules\FullscreenQuad (DX11.Layer).v4p" nodename="FullscreenQuad (DX11.Layer)" componentmode="Hidden" id="16">
@@ -65,7 +59,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3345" top="4755" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="31590" top="4260" width="8790" height="5550">
+   <BOUNDS type="Window" left="22845" top="3585" width="7320" height="5640">
    </BOUNDS>
    <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>
@@ -107,73 +101,5 @@
    <LINK srcnodeid="18" srcpinname="Transform Out" dstnodeid="15" dstpinname="Aspect Ratio">
    </LINK>
    <PACK Name="addonpack" Version="34.1.0">
-   </PACK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="22" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="4113" top="1770" width="555" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="4113" top="1770" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="|layer 1|">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="#vvvv">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <NODE systemname="Spout_Receiver_DX11" filename="Spout_Receiver_DX11.v4p" nodename="Spout_Receiver_DX11.v4p" componentmode="Hidden" id="21">
-   <BOUNDS type="Node" left="4125" top="2445" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <BOUNDS type="Window" left="13140" top="765" width="5340" height="10740">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="22" srcpinname="Output String" dstnodeid="21" dstpinname="SpoutSenderName">
-   </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="26" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="4512" top="2070" width="555" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="4512" top="2070" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="|layer 2|">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="#vvvv">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <NODE systemname="Spout_Receiver_DX11" filename="Spout_Receiver_DX11.v4p" nodename="Spout_Receiver_DX11.v4p" componentmode="Hidden" id="25">
-   <BOUNDS type="Node" left="4515" top="2745" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <BOUNDS type="Window" left="13140" top="765" width="5340" height="10740">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="26" srcpinname="Output String" dstnodeid="25" dstpinname="SpoutSenderName">
-   </LINK>
-   <LINK srcnodeid="25" srcpinname="Texture" dstnodeid="12" dstpinname="Texture In 2">
-   </LINK>
-   <LINK srcnodeid="21" srcpinname="Texture" dstnodeid="12" dstpinname="Texture In">
-   </LINK>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="27" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="4905" top="3705" width="765" height="255">
-   </BOUNDS>
-   <BOUNDS type="Node" left="4905" top="3705" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Normal">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="27" srcpinname="Output Enum" dstnodeid="12" dstpinname="Technique">
-   </LINK>
-   <PACK Name="Image" Version="0.2.0">
    </PACK>
    </PATCH>
