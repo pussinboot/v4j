@@ -37,7 +37,7 @@
    </PIN>
    <PIN pinname="Slider Constraints" slicecount="1" values="scY">
    </PIN>
-   <PIN pinname="X Input Value" visible="1" pintype="Input" slicecount="1" values="0">
+   <PIN pinname="X Input Value" visible="1" pintype="Input" slicecount="1" values="0.0263737194141055">
    </PIN>
    <PIN pinname="X Output Value" visible="1" pintype="Output">
    </PIN>
