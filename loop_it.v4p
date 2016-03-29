@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\loop_it.v4p" scrollx="525" scrolly="8400" systemname="loop_it" filename="C:\Code\vvvv\v4j\loop_it.v4p">
+   <PATCH nodename="C:\Code\vvvv\v4j\loop_it.v4p" scrollx="0" scrolly="9615" systemname="loop_it" filename="C:\Code\vvvv\v4j\loop_it.v4p">
    <BOUNDS type="Window" left="2610" top="3585" width="18465" height="12600">
    </BOUNDS>
    <NODE systemname="OSCDecoder (Network)" nodename="OSCDecoder (Network)" componentmode="Hidden" id="11">
@@ -601,7 +601,7 @@
    </BOUNDS>
    <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Midi Output Port" visible="1" slicecount="1" values="Twitch">
+   <PIN pinname="Midi Output Port" visible="1" slicecount="1" values="|Microsoft GS Wavetable Synth|">
    </PIN>
    <BOUNDS type="Box" left="8985" top="18315">
    </BOUNDS>
@@ -1209,7 +1209,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="14130" top="15855" width="1410" height="270">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|/toggle l playback|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|/toggle r playback|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -1236,4 +1236,26 @@
    </LINK>
    <LINK srcnodeid="182" srcpinname="Output" dstnodeid="180" dstpinname="Index">
    </LINK>
+   <LINK srcnodeid="159" srcpinname="Y Output Value" dstnodeid="181" dstpinname="Spread">
+   <LINKPOINT x="13905" y="13095">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="144" srcpinname="recording" dstnodeid="172" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="173" srcpinname="Output" dstnodeid="165" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="183" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="10305" top="12690" width="4065" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10305" top="12690" width="4065" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|/ maybe i need to unzip flipflop&apos;s output before getslice|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
    </PATCH>
