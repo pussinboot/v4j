@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\loop_it.v4p" scrollx="390" scrolly="8160" systemname="loop_it" filename="C:\Code\vvvv\v4j\loop_it.v4p">
+   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\loop_it.v4p" scrollx="1035" scrolly="7200" systemname="loop_it" filename="C:\Code\vvvv\v4j\loop_it.v4p">
    <BOUNDS type="Window" left="14085" top="4770" width="12375" height="9495">
    </BOUNDS>
    <NODE systemname="OSCDecoder (Network)" nodename="OSCDecoder (Network)" componentmode="Hidden" id="11">
@@ -309,7 +309,7 @@
    </PIN>
    <PIN pinname="X Input Value" slicecount="2" values="0,0">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="2" values="0,0">
+   <PIN pinname="Y Input Value" slicecount="2" values="0,0" visible="1">
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
@@ -405,7 +405,7 @@
    <LINK srcnodeid="83" srcpinname="Y Output Value" dstnodeid="81" dstpinname="Remote Port">
    </LINK>
    <NODE systemname="FormatValue (String)" nodename="FormatValue (String)" componentmode="Hidden" id="85">
-   <BOUNDS type="Node" left="6150" top="13515" width="100" height="100">
+   <BOUNDS type="Node" left="6105" top="13785" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="0.733333349227905">
    </PIN>
@@ -417,18 +417,18 @@
    <LINK srcnodeid="85" srcpinname="Output" dstnodeid="78" dstpinname="Arguments">
    </LINK>
    <NODE systemname="Cons (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (Spreads)" componentmode="Hidden" id="88">
-   <BOUNDS type="Node" left="5610" top="12870" width="100" height="100">
+   <BOUNDS type="Node" left="5565" top="12855" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="1" values="0.733333349227905">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="88" srcpinname="Output" dstnodeid="85" dstpinname="Input">
    </LINK>
-   <NODE systemname="loop_it-1" filename="loop_it-1.v4p" nodename="loop_it-1.v4p" componentmode="InAWindow" id="91">
+   <NODE systemname="loop_it-1" filename="loop_it-1.v4p" nodename="loop_it-1.v4p" componentmode="Hidden" id="91">
    <BOUNDS type="Node" left="4277" top="12865" width="0" height="0">
    </BOUNDS>
    <BOUNDS type="Box" left="4110" top="10420" width="5020" height="4890">
@@ -452,26 +452,6 @@
    </LINK>
    <LINK srcnodeid="91" srcpinname="recording" dstnodeid="62" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="loop_it-1" filename="loop_it-1.v4p" nodename="loop_it-1.v4p" componentmode="Hidden" id="92">
-   <BOUNDS type="Node" left="6167" top="12280" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="4875" top="9835" width="5020" height="4890">
-   </BOUNDS>
-   <BOUNDS type="Window" left="18720" top="9885" width="5985" height="4890">
-   </BOUNDS>
-   <PIN pinname="recording" visible="1">
-   </PIN>
-   <PIN pinname="no beats to record" visible="1">
-   </PIN>
-   <PIN pinname="input" visible="1">
-   </PIN>
-   <PIN pinname="output" visible="1">
-   </PIN>
-   <PIN pinname="beat" visible="1">
-   </PIN>
-   <PIN pinname="start recording" visible="1">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="93" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="4155" top="10920" width="285" height="240">
    </BOUNDS>
@@ -490,15 +470,7 @@
    </NODE>
    <LINK srcnodeid="93" srcpinname="Y Output Value" dstnodeid="91" dstpinname="no beats to record">
    </LINK>
-   <LINK srcnodeid="93" srcpinname="Y Output Value" dstnodeid="92" dstpinname="no beats to record">
-   </LINK>
    <LINK srcnodeid="5" srcpinname="Output" dstnodeid="91" dstpinname="input">
-   </LINK>
-   <LINK srcnodeid="31" srcpinname="Output" dstnodeid="92" dstpinname="input">
-   </LINK>
-   <LINK srcnodeid="92" srcpinname="output" dstnodeid="88" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="51" srcpinname="Y Output Value" dstnodeid="92" dstpinname="beat">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="94" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="2100" top="10005" width="480" height="480">
@@ -517,9 +489,9 @@
    </PIN>
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="94" srcpinname="Y Output Value" dstnodeid="92" dstpinname="start recording">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="95" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="1575" top="11355" width="480" height="480">
    </BOUNDS>
@@ -533,9 +505,9 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="92" srcpinname="recording" dstnodeid="95" dstpinname="Y Input Value">
-   </LINK>
    <LINK srcnodeid="11" srcpinname="Arguments" dstnodeid="6" dstpinname="Input">
    </LINK>
    <NODE systemname="loop_it-2" filename="loop_it-2.v4p" nodename="loop_it-2.v4p" componentmode="Hidden" id="99">
@@ -770,28 +742,16 @@
    </LINK>
    <LINK srcnodeid="133" srcpinname="Output" dstnodeid="125" dstpinname="Play">
    </LINK>
-   <NODE systemname="Divide (Value)" nodename="Divide (Value)" componentmode="Hidden" id="135">
-   <BOUNDS type="Node" left="10935" top="15210" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="4" values="0,0,0,0">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="2.8">
-   </PIN>
-   </NODE>
    <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="136">
-   <BOUNDS type="Node" left="10875" top="15630" width="100" height="100">
+   <BOUNDS type="Node" left="11175" top="15765" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="135" srcpinname="Output" dstnodeid="136" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="136" srcpinname="Output" dstnodeid="125" dstpinname="Velocity">
    </LINK>
    <NODE systemname="MIDINOTE (DEVICES)" nodename="MidiNote (Devices)" componentmode="Hidden" id="137">
@@ -836,12 +796,142 @@
    <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="92" srcpinname="recording" dstnodeid="139" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="91" srcpinname="recording" dstnodeid="139" dstpinname="Input 1">
    </LINK>
+   <NODE systemname="Divide (Value)" nodename="Divide (Value)" componentmode="Hidden" id="140">
+   <BOUNDS type="Node" left="11535" top="14835" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="5" values="0.860715985298157,0.905716001987457,0.905716001987457,0.905716001987457,1">
+   </PIN>
+   </NODE>
+   <NODE id="135" systemname="Divide (Value)" nodename="Divide (Value)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <BOUNDS type="Node" left="10935" top="15210" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="4" pintype="Input" values="0,0,0,0">
+   </PIN>
+   <PIN pinname="Output" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" pintype="Input" visible="1" values="2.8">
+   </PIN>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Error Handling Style" pintype="Input" visible="0" slicecount="1" values="RedNode">
+   </PIN>
+   <PIN pinname="Success" pintype="Output" visible="0">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
    <LINK srcnodeid="139" srcpinname="Output" dstnodeid="135" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="88" srcpinname="Output" dstnodeid="136" dstpinname="Input 1">
+   <LINK srcnodeid="135" srcpinname="Output" dstnodeid="136" dstpinname="Input 2">
    </LINK>
+   <NODE systemname="AND (Boolean)" nodename="AND (Boolean)" componentmode="Hidden" id="142">
+   <BOUNDS type="Node" left="7080" top="11250" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="4" values="0,1,1,1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="143" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7830" top="10425" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7830" top="10425" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="143" srcpinname="Y Output Value" dstnodeid="142" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="142" srcpinname="Output" dstnodeid="76" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="120" srcpinname="Output" dstnodeid="142" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="142" srcpinname="Output" dstnodeid="136" dstpinname="Input 1">
+   </LINK>
+   <NODE id="92" systemname="loop_it-1" filename="loop_it-1.v4p" nodename="loop_it-1.v4p" componentmode="Hidden">
+   <PIN pinname="recording" visible="1">
+   </PIN>
+   <BOUNDS type="Node" left="6737" top="12085" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5445" top="9640" width="5020" height="4890">
+   </BOUNDS>
+   <BOUNDS type="Window" left="18720" top="9885" width="5985" height="4890">
+   </BOUNDS>
+   <PIN pinname="no beats to record" visible="1">
+   </PIN>
+   <PIN pinname="input" visible="1">
+   </PIN>
+   <PIN pinname="output" visible="1">
+   </PIN>
+   <PIN pinname="beat" visible="1">
+   </PIN>
+   <PIN pinname="start recording" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="93" srcpinname="Y Output Value" dstnodeid="92" dstpinname="no beats to record">
+   </LINK>
+   <LINK srcnodeid="31" srcpinname="Output" dstnodeid="92" dstpinname="input">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Y Output Value" dstnodeid="92" dstpinname="beat">
+   </LINK>
+   <LINK srcnodeid="94" srcpinname="Y Output Value" dstnodeid="92" dstpinname="start recording">
+   </LINK>
+   <NODE systemname="loop_it-1" filename="loop_it-1.v4p" nodename="loop_it-1.v4p" componentmode="Hidden" id="144">
+   <BOUNDS type="Node" left="6197" top="12490" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6030" top="10045" width="5020" height="4890">
+   </BOUNDS>
+   <BOUNDS type="Window" left="7800" top="9570" width="5985" height="4890">
+   </BOUNDS>
+   <PIN pinname="recording" visible="1">
+   </PIN>
+   <PIN pinname="no beats to record" visible="1" slicecount="1" values="8">
+   </PIN>
+   <PIN pinname="input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="output" visible="1">
+   </PIN>
+   <PIN pinname="beat" visible="1">
+   </PIN>
+   <PIN pinname="start recording" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="144" srcpinname="recording" dstnodeid="139" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="144" srcpinname="output" dstnodeid="88" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="144" srcpinname="recording" dstnodeid="95" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Y Output Value" dstnodeid="144" dstpinname="beat">
+   </LINK>
+   <LINK srcnodeid="94" srcpinname="Y Output Value" dstnodeid="144" dstpinname="start recording">
+   </LINK>
+   <LINK srcnodeid="93" srcpinname="Y Output Value" dstnodeid="144" dstpinname="no beats to record">
+   </LINK>
+   <LINK srcnodeid="31" srcpinname="Output" dstnodeid="144" dstpinname="input">
+   </LINK>
+   <LINK srcnodeid="114" srcpinname="Y Output Value" dstnodeid="94" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="145">
+   <BOUNDS type="Node" left="6420" top="13350" width="100" height="100">
+   </BOUNDS>
+   </NODE>
    </PATCH>
