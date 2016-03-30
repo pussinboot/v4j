@@ -140,7 +140,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="7800" top="9570" width="5985" height="4890">
+   <BOUNDS type="Window" left="18720" top="9885" width="5985" height="4890">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
