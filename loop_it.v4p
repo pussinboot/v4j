@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\v4j\loop_it.v4p" scrollx="0" scrolly="9615" systemname="loop_it" filename="C:\Code\vvvv\v4j\loop_it.v4p">
-   <BOUNDS type="Window" left="2610" top="3585" width="18465" height="12600">
+   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\loop_it.v4p" scrollx="285" scrolly="8400" systemname="loop_it" filename="C:\Code\vvvv\v4j\loop_it.v4p">
+   <BOUNDS type="Window" left="3690" top="2775" width="18465" height="12600">
    </BOUNDS>
    <NODE systemname="OSCDecoder (Network)" nodename="OSCDecoder (Network)" componentmode="Hidden" id="11">
    <BOUNDS type="Node" left="3150" top="3870" width="100" height="100">
@@ -261,7 +261,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4965" top="17355" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0,0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -439,6 +439,8 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Midi Input Port" visible="1" slicecount="1" values="Twitch">
+   </PIN>
    </NODE>
    <NODE systemname="I (Spreads)" nodename="I (Spreads)" componentmode="Hidden" id="122">
    <BOUNDS type="Node" left="9450" top="11250" width="100" height="100">
@@ -601,7 +603,7 @@
    </BOUNDS>
    <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Midi Output Port" visible="1" slicecount="1" values="|Microsoft GS Wavetable Synth|">
+   <PIN pinname="Midi Output Port" visible="1" slicecount="1" values="Twitch">
    </PIN>
    <BOUNDS type="Box" left="8985" top="18315">
    </BOUNDS>
@@ -677,9 +679,9 @@
    <LINK srcnodeid="91" srcpinname="recording" dstnodeid="139" dstpinname="Input 1">
    </LINK>
    <NODE systemname="loop_it-1" filename="loop_it-1.v4p" nodename="loop_it-1.v4p" componentmode="InAWindow" id="144">
-   <BOUNDS type="Node" left="6542" top="12190" width="0" height="0">
+   <BOUNDS type="Node" left="6542" top="12370" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="6375" top="9745" width="5020" height="4890">
+   <BOUNDS type="Box" left="6375" top="9925" width="5020" height="4890">
    </BOUNDS>
    <BOUNDS type="Window" left="7800" top="9570" width="5985" height="4890">
    </BOUNDS>
@@ -719,7 +721,7 @@
    <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="146">
    <BOUNDS type="Node" left="1905" top="13800" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   <PIN pinname="Input" visible="1" slicecount="8" values="0,0,1,0,0,0,0,0">
    </PIN>
    <PIN pinname="Index" visible="1" slicecount="1" values="0">
    </PIN>
@@ -729,8 +731,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="146" srcpinname="Output" dstnodeid="147" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="120" srcpinname="Output" dstnodeid="146" dstpinname="Input">
    </LINK>
    <NODE systemname="Sift (Value)" nodename="Sift (Value)" componentmode="Hidden" id="151">
    <BOUNDS type="Node" left="1110" top="14610" width="100" height="100">
@@ -881,7 +881,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1965" top="16710" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -891,7 +891,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -1024,8 +1024,6 @@
    </NODE>
    <LINK srcnodeid="91" srcpinname="recording" dstnodeid="168" dstpinname="Y Input Value">
    </LINK>
-   <LINK srcnodeid="157" srcpinname="Y Output Value" dstnodeid="80" dstpinname="Y Input Value">
-   </LINK>
    <NODE systemname="SwapDim (Spreads)" nodename="SwapDim (Spreads)" componentmode="Hidden" id="169">
    <BOUNDS type="Node" left="6135" top="18960" width="100" height="100">
    </BOUNDS>
@@ -1081,9 +1079,9 @@
    <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="180">
    <BOUNDS type="Node" left="14025" top="13515" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   <PIN pinname="Input" visible="1" slicecount="8" values="0,0,1,0,0,0,0,0">
    </PIN>
-   <PIN pinname="Index" visible="1" slicecount="1" values="0">
+   <PIN pinname="Index" visible="1" slicecount="1" values="8">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -1161,7 +1159,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="14085" top="16425" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1171,7 +1169,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -1220,22 +1218,6 @@
    </NODE>
    <LINK srcnodeid="152" srcpinname="Output 2" dstnodeid="179" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="120" srcpinname="Output" dstnodeid="180" dstpinname="Input">
-   </LINK>
-   <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="182">
-   <BOUNDS type="Node" left="14760" top="13455" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="178" srcpinname="Output" dstnodeid="182" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="182" srcpinname="Output" dstnodeid="180" dstpinname="Index">
-   </LINK>
    <LINK srcnodeid="159" srcpinname="Y Output Value" dstnodeid="181" dstpinname="Spread">
    <LINKPOINT x="13905" y="13095">
    </LINKPOINT>
@@ -1258,4 +1240,58 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <LINK srcnodeid="178" srcpinname="Output" dstnodeid="180" dstpinname="Index">
+   </LINK>
+   <NODE systemname="Unzip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (Value)" componentmode="Hidden" id="185">
+   <BOUNDS type="Node" left="8460" top="13410" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="8" values="0,0,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="120" srcpinname="Output" dstnodeid="185" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="185" srcpinname="Output 1" dstnodeid="146" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="185" srcpinname="Output 2" dstnodeid="180" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="150" srcpinname="Output" dstnodeid="147" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="178" srcpinname="Output" dstnodeid="181" dstpinname="Index">
+   </LINK>
+   <NODE systemname="Cons (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (Spreads)" componentmode="Hidden" id="186">
+   <BOUNDS type="Node" left="4980" top="17010" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="157" srcpinname="Y Output Value" dstnodeid="186" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="186" srcpinname="Output" dstnodeid="80" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="174" srcpinname="Y Output Value" dstnodeid="186" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="187">
+   <BOUNDS type="Node" left="6330" top="14940" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Index" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="178" srcpinname="Output" dstnodeid="187" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="Output" dstnodeid="88" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="144" srcpinname="output" dstnodeid="187" dstpinname="Input">
+   </LINK>
    </PATCH>
