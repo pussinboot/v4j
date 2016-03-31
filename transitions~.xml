@@ -1,0 +1,59 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\Code\vvvv\v4j\transitions.v4p" systemname="transitions" filename="C:\Code\vvvv\v4j\transitions.v4p">
+   <BOUNDS type="Window" left="14565" top="9930" width="9000" height="6000">
+   </BOUNDS>
+   <NODE systemname="transition_Morph (DX11.TextureFX)" filename="..\..\..\Users\shapil\Desktop\glitchpack\transition_Morph.tfx" nodename="transition_Morph (DX11.TextureFX)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="765" top="2190" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="from" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="to" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Default SizeXY" visible="1" pintype="Input" slicecount="2" values="256,256">
+   </PIN>
+   <PIN pinname="progress" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="strength" slicecount="1" values="0.63">
+   </PIN>
+   <BOUNDS type="Box" left="765" top="2190">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="transition_randSquares (DX11.TextureFX)" filename="..\..\..\Users\shapil\Desktop\glitchpack\transition_randSquares.tfx" nodename="transition_randSquares (DX11.TextureFX)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="2340" top="2205" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="2340" top="2205">
+   </BOUNDS>
+   <PIN pinname="progress" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Default SizeXY" visible="1" pintype="Input" slicecount="2" values="256,256">
+   </PIN>
+   <PIN pinname="from" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="to" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="sizeXY" slicecount="2" values="16,16">
+   </PIN>
+   <PIN pinname="smoothness" slicecount="1" values="0.8">
+   </PIN>
+   </NODE>
+   <NODE systemname="transition_waveScrawler (DX11.TextureFX)" filename="..\..\..\Users\shapil\Desktop\glitchpack\transition_waveScrawler.tfx" nodename="transition_waveScrawler (DX11.TextureFX)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="4230" top="2220" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="from" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="to" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="progress" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Default SizeXY" visible="1" pintype="Input" slicecount="2" values="256,256">
+   </PIN>
+   </NODE>
+   <PACK Name="addonpack" Version="34.1.0">
+   </PACK>
+   </PATCH>
