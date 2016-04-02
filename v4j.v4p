@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\v4j.v4p" systemname="v4j" filename="C:\Users\Leo\Documents\GitHub\v4j\v4j.v4p" scrollx="0" scrolly="720">
+   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\v4j.v4p" systemname="v4j" filename="C:\Users\Leo\Documents\GitHub\v4j\v4j.v4p" scrollx="0" scrolly="690">
    <BOUNDS type="Window" left="705" top="555" width="27480" height="16695">
    </BOUNDS>
    <NODE systemname="Blend (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Mixer\Blend.tfx" nodename="Blend (DX11.TextureFX)" componentmode="Hidden" id="12">
@@ -60,12 +60,12 @@
    <PIN pinname="Texture" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="15">
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="FullScreen" id="15">
    <BOUNDS type="Node" left="4095" top="16200" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="4095" top="16200" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="29070" top="-1275" width="14010" height="8460">
+   <BOUNDS type="Window" left="-24480" top="1440" width="14010" height="8460">
    </BOUNDS>
    <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>
@@ -238,6 +238,8 @@
    <PIN pinname="device" visible="1" slicecount="1" values="|2- Twitch|">
    </PIN>
    <PIN pinname="enable" visible="1">
+   </PIN>
+   <PIN pinname="midi output" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="48" systemname="IOBox (Value Advanced)">
@@ -629,6 +631,8 @@
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="1" visible="1" values="|2- Twitch|">
    </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="72" srcpinname="Output Enum" dstnodeid="49" dstpinname="midi output">
    </LINK>
@@ -649,30 +653,6 @@
    <LINK srcnodeid="66" srcpinname="Y Output Value" dstnodeid="73" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="67" srcpinname="Texture Out" dstnodeid="71" dstpinname="Texture In">
-   </LINK>
-   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="74">
-   <BOUNDS type="Node" left="3315" top="2295" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="SpoutSenderName" visible="1">
-   </PIN>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="75">
-   <BOUNDS type="Node" left="5325" top="2280" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="SpoutSenderName" visible="1">
-   </PIN>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="22" srcpinname="Output String" dstnodeid="75" dstpinname="SpoutSenderName">
-   </LINK>
-   <LINK srcnodeid="26" srcpinname="Output String" dstnodeid="74" dstpinname="SpoutSenderName">
-   </LINK>
-   <LINK srcnodeid="74" srcpinname="Texture" dstnodeid="42" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="75" srcpinname="Texture" dstnodeid="43" dstpinname="Input Node">
    </LINK>
    <NODE id="76" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="1245" top="1380" width="780" height="240">
@@ -838,4 +818,30 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="84">
+   <BOUNDS type="Node" left="3045" top="2085" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="SpoutSenderName" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="85">
+   <BOUNDS type="Node" left="5130" top="2325" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="SpoutSenderName" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="22" srcpinname="Output String" dstnodeid="85" dstpinname="SpoutSenderName">
+   </LINK>
+   <LINK srcnodeid="85" srcpinname="Texture" dstnodeid="43" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="84" srcpinname="Texture" dstnodeid="42" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Output String" dstnodeid="84" dstpinname="SpoutSenderName">
+   </LINK>
+   <LINK srcnodeid="72" srcpinname="Output Enum" dstnodeid="46" dstpinname="midi output">
+   </LINK>
    </PATCH>

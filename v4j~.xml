@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\v4j.v4p" systemname="v4j" filename="C:\Users\Leo\Documents\GitHub\v4j\v4j.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\v4j.v4p" systemname="v4j" filename="C:\Users\Leo\Documents\GitHub\v4j\v4j.v4p" scrollx="0" scrolly="690">
    <BOUNDS type="Window" left="705" top="555" width="27480" height="16695">
    </BOUNDS>
    <NODE systemname="Blend (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Mixer\Blend.tfx" nodename="Blend (DX11.TextureFX)" componentmode="Hidden" id="12">
@@ -17,7 +17,7 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="13" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="12195" top="6315" width="2790" height="435">
+   <BOUNDS type="Box" left="12195" top="6315" width="2640" height="990">
    </BOUNDS>
    <BOUNDS type="Node" left="12195" top="6315" width="0" height="0">
    </BOUNDS>
@@ -238,6 +238,8 @@
    <PIN pinname="device" visible="1" slicecount="1" values="|2- Twitch|">
    </PIN>
    <PIN pinname="enable" visible="1">
+   </PIN>
+   <PIN pinname="midi output" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="48" systemname="IOBox (Value Advanced)">
@@ -507,7 +509,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Index" slicecount="1" values="1">
+   <PIN pinname="Index" slicecount="1" values="2">
    </PIN>
    </NODE>
    <LINK srcnodeid="66" srcpinname="Y Output Value" dstnodeid="68" dstpinname="Input">
@@ -600,30 +602,6 @@
    </LINK>
    <LINK srcnodeid="13" srcpinname="X Output Value" dstnodeid="53" dstpinname="progress">
    </LINK>
-   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="69">
-   <BOUNDS type="Node" left="3135" top="2325" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="SpoutSenderName" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="69" srcpinname="Texture" dstnodeid="42" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="26" srcpinname="Output String" dstnodeid="69" dstpinname="SpoutSenderName">
-   </LINK>
-   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="70">
-   <BOUNDS type="Node" left="5430" top="2445" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="SpoutSenderName" visible="1" slicecount="1" values="|Spout Demo Sender 32bit|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="22" srcpinname="Output String" dstnodeid="70" dstpinname="SpoutSenderName">
-   </LINK>
-   <LINK srcnodeid="70" srcpinname="Texture" dstnodeid="43" dstpinname="Input Node">
-   </LINK>
    <NODE systemname="fftDistorgttt" filename="dx11\fftDistorgttt.v4p" nodename="dx11\fftDistorgttt.v4p" componentmode="Hidden" id="71">
    <BOUNDS type="Node" left="5475" top="14070" width="100" height="100">
    </BOUNDS>
@@ -653,6 +631,8 @@
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="1" visible="1" values="|2- Twitch|">
    </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="72" srcpinname="Output Enum" dstnodeid="49" dstpinname="midi output">
    </LINK>
@@ -665,17 +645,203 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Index" slicecount="1" values="2">
+   <PIN pinname="Index" slicecount="1" values="3">
    </PIN>
    </NODE>
    <LINK srcnodeid="73" srcpinname="Output" dstnodeid="71" dstpinname="enabled">
    </LINK>
    <LINK srcnodeid="66" srcpinname="Y Output Value" dstnodeid="73" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="56" srcpinname="Output" dstnodeid="67" dstpinname="Texture In">
-   </LINK>
    <LINK srcnodeid="67" srcpinname="Texture Out" dstnodeid="71" dstpinname="Texture In">
    </LINK>
-   <LINK srcnodeid="71" srcpinname="Texture Out" dstnodeid="16" dstpinname="Texture">
+   <NODE id="76" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1245" top="1380" width="780" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1245" top="1380" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="30">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="-6" systemname="MainLoop (VVVV)" nodename="MainLoop (VVVV)" componentmode="Hidden">
+   <BOUNDS type="Node" left="1365" top="1845" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Current Frame" visible="1">
+   </PIN>
+   <PIN pinname="Maximum forground fps" visible="1">
+   </PIN>
+   <PIN pinname="Maximum background fpsS" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="76" srcpinname="Y Output Value" dstnodeid="-6" dstpinname="Maximum background fpsS">
+   </LINK>
+   <LINK srcnodeid="76" srcpinname="Y Output Value" dstnodeid="-6" dstpinname="Maximum forground fps">
+   </LINK>
+   <NODE systemname="feedback" filename="feedback.v4p" nodename="feedback.v4p" componentmode="Hidden" id="77">
+   <BOUNDS type="Node" left="5400" top="12285" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="wh in" visible="1">
+   </PIN>
+   <PIN pinname="beat in" visible="1">
+   </PIN>
+   <PIN pinname="no rects" slicecount="1" values="1">
+   </PIN>
+   <BOUNDS type="Window" left="29340" top="2610" width="10035" height="10140">
+   </BOUNDS>
+   <PIN pinname="enabled" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Actual BackBuffer SizeXY" dstnodeid="77" dstpinname="wh in">
+   </LINK>
+   <LINK srcnodeid="49" srcpinname="beat out" dstnodeid="77" dstpinname="beat in">
+   </LINK>
+   <LINK srcnodeid="56" srcpinname="Output" dstnodeid="77" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="77" srcpinname="Texture Out" dstnodeid="67" dstpinname="Texture In">
+   </LINK>
+   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="78">
+   <BOUNDS type="Node" left="7020" top="12150" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="66" srcpinname="Y Output Value" dstnodeid="78" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="78" srcpinname="Output" dstnodeid="77" dstpinname="enabled">
+   </LINK>
+   <NODE systemname="Glitch (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Mixer\Glitch.tfx" nodename="Glitch (DX11.TextureFX)" componentmode="Hidden" id="79">
+   <BOUNDS type="Node" left="5790" top="14745" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="horiz">
+   </PIN>
+   <BOUNDS type="Box" left="5790" top="14745">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture In 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Fader" visible="1" slicecount="1" values="0.78">
+   </PIN>
+   <PIN pinname="Random Seed" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Glitch (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Mixer\Glitch.tfx" nodename="Glitch (DX11.TextureFX)" componentmode="Hidden" id="80">
+   <BOUNDS type="Node" left="5745" top="15240" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Technique" slicecount="1" values="GlitchVertical">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="vert">
+   </PIN>
+   <BOUNDS type="Box" left="5745" top="15240">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture In 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Fader" visible="1" slicecount="1" values="0.77">
+   </PIN>
+   <PIN pinname="Random Seed" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="71" srcpinname="Texture Out" dstnodeid="79" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="71" srcpinname="Texture Out" dstnodeid="79" dstpinname="Texture In 2">
+   </LINK>
+   <LINK srcnodeid="79" srcpinname="Texture Out" dstnodeid="80" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="79" srcpinname="Texture Out" dstnodeid="80" dstpinname="Texture In 2">
+   </LINK>
+   <LINK srcnodeid="80" srcpinname="Texture Out" dstnodeid="16" dstpinname="Texture">
+   </LINK>
+   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="81">
+   <BOUNDS type="Node" left="7320" top="14670" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="66" srcpinname="Y Output Value" dstnodeid="81" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="81" srcpinname="Output" dstnodeid="79" dstpinname="Enabled">
+   </LINK>
+   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="82">
+   <BOUNDS type="Node" left="7620" top="15285" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="5">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="66" srcpinname="Y Output Value" dstnodeid="82" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="82" srcpinname="Output" dstnodeid="80" dstpinname="Enabled">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="83" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="7755" top="15600" width="1545" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7755" top="15600" width="1545" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|/ the last 2 are meh|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="84">
+   <BOUNDS type="Node" left="3045" top="2085" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="SpoutSenderName" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="85">
+   <BOUNDS type="Node" left="5130" top="2325" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="SpoutSenderName" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="22" srcpinname="Output String" dstnodeid="85" dstpinname="SpoutSenderName">
+   </LINK>
+   <LINK srcnodeid="85" srcpinname="Texture" dstnodeid="43" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="84" srcpinname="Texture" dstnodeid="42" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Output String" dstnodeid="84" dstpinname="SpoutSenderName">
+   </LINK>
+   <LINK srcnodeid="72" srcpinname="Output Enum" dstnodeid="46" dstpinname="midi output">
    </LINK>
    </PATCH>
