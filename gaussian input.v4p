@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\v4j\gaussian input.v4p" systemname="gaussian input" filename="C:\Code\vvvv\v4j\gaussian input.v4p">
-   <BOUNDS type="Window" left="3780" top="6075" width="9000" height="6000">
+   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\gaussian input.v4p" systemname="gaussian input" filename="C:\Code\vvvv\v4j\gaussian input.v4p">
+   <BOUNDS type="Window" left="17130" top="10020" width="9000" height="6000">
    </BOUNDS>
    <NODE systemname="Renderer (GDI)" nodename="Renderer (GDI)" componentmode="InABox" id="0">
    <BOUNDS type="Node" left="5160" top="2940" width="100" height="100">
@@ -15,7 +15,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Point (GDI)" nodename="Point (GDI)" componentmode="Hidden" id="1">
-   <BOUNDS type="Node" left="3885" top="3225" width="100" height="100">
+   <BOUNDS type="Node" left="3975" top="3435" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -55,7 +55,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Bounds (Spectral)" nodename="Bounds (Spectral)" componentmode="Hidden" id="7">
-   <BOUNDS type="Node" left="1275" top="2730" width="100" height="100">
+   <BOUNDS type="Node" left="750" top="2670" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="130" values="-0.0331921181746713,-0.03787721298448,-0.0431338301468786,-0.0490179327356355,-0.0555890073712164,-0.0629100175801905,-0.0710473123878489,-0.0800704853618992,-0.0900521794565514,-0.101067833237157,-0.113195364404164,-0.126514786988591,-0.141107759164947,-0.157057059325031,-0.174445988878452,-0.193357701191761,-0.213874457143289,-0.236076808947948,-0.260042715184588,-0.285846591324001,-0.313558301490856,-0.343242098676842,-0.374955522131088,-0.408748262160396,-0.444661004046362,-0.482724264197132,-0.522957232964952,-0.565366639742268,-0.609945656964305,-0.656672860460511,-0.705511264178407,-0.756407447620635,-0.809290794362293,-0.864072859727726,-0.920646885085844,-0.978887475258391,-1.03865045422051,-1.0997729126089,-1.16207345854856,-1.22535268098123,-1.28939383205216,-1.35396373221878,-1.41881389862603,-1.4836818939951,-1.54829288984912,-1.6123614344104,-1.67559341201103,-1.73768817743103,-1.79834084528119,-1.85724471145196,-1.91409378082095,-1.96858537291383,-2.02042277510639,-2.06931791129245,-2.11499399276769,-2.15718811743171,-2.19565378331478,-2.23016328290815,-2.26050994582216,-2.28651019890624,-2.30800541511958,-2.32486352511063,-2.33698036860286,-2.3442807662427,-2.34671929647902,-2.3442807662427,-2.33698036860286,-2.32486352511063,-2.30800541511958,-2.28651019890624,-2.26050994582216,-2.23016328290815,-2.19565378331478,-2.15718811743171,-2.11499399276769,-2.06931791129245,-2.02042277510639,-1.96858537291383,-1.91409378082095,-1.85724471145196,-1.79834084528119,-1.73768817743103,-1.67559341201103,-1.6123614344104,-1.54829288984912,-1.4836818939951,-1.41881389862603,-1.35396373221878,-1.28939383205216,-1.22535268098123,-1.16207345854856,-1.0997729126089,-1.03865045422051,-0.978887475258392,-0.920646885085845,-0.864072859727726,-0.809290794362293,-0.756407447620635,-0.705511264178407,-0.656672860460511,-0.609945656964304,-0.565366639742268,-0.522957232964952,-0.482724264197132,-0.444661004046362,-0.408748262160396,-0.374955522131088,-0.343242098676842,-0.313558301490856,-0.285846591324001,-0.260042715184588,-0.236076808947948,-0.213874457143289,-0.193357701191761,-0.174445988878452,-0.157057059325031,-0.141107759164947,-0.126514786988591,-0.113195364404164,-0.101067833237157,-0.0900521794565514,-0.0800704853618992,-0.0710473123878489,-0.0629100175801904,-0.0555890073712163,-0.0490179327356355,-0.0431338301468787,-0.03787721298448,-0.0331921181746713,-2.34671929647902">
    </PIN>
@@ -65,7 +65,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="8">
-   <BOUNDS type="Node" left="1170" top="4050" width="100" height="100">
+   <BOUNDS type="Node" left="1095" top="3975" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Source Minimum" visible="1">
    </PIN>
@@ -95,7 +95,7 @@
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="10" dstpinname="Input 1">
    </LINK>
    <NODE systemname="CDR (Spreads)" nodename="CDR (Spreads)" componentmode="Hidden" id="12">
-   <BOUNDS type="Node" left="1665" top="2220" width="100" height="100">
+   <BOUNDS type="Node" left="1080" top="2055" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -185,7 +185,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="690" top="870" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-0.21">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-0.25">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -197,5 +197,45 @@
    <LINK srcnodeid="20" srcpinname="Y Output Value" dstnodeid="3" dstpinname="B">
    </LINK>
    <PACK Name="addonpack" Version="34.1.0">
+   </PACK>
+   <NODE systemname="nanopad_midi" filename="nanopad_midi.v4p" nodename="nanopad_midi.v4p" componentmode="InAWindow" id="21">
+   <BOUNDS type="Node" left="6015" top="720" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="nanopad input" visible="1" slicecount="1" values="|nanoPAD 1 PAD|">
+   </PIN>
+   <PIN pinname="enabled" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="top_ind" visible="1">
+   </PIN>
+   <PIN pinname="top_select" visible="1">
+   </PIN>
+   <PIN pinname="bot trigs" visible="1">
+   </PIN>
+   <PIN pinname="xy" visible="1" slicecount="2" values="0.551181102362205,0.503937007874016">
+   </PIN>
+   <BOUNDS type="Window" left="9075" top="4095" width="11595" height="8070">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="23">
+   <BOUNDS type="Node" left="5730" top="1800" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1" slicecount="2" values="0.458461789887458,-0.630138240356885">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="23" srcpinname="X" dstnodeid="18" dstpinname="X Input Value">
+   </LINK>
+   <NODE systemname="Sign (Value)" nodename="Sign (Value)" componentmode="Hidden" id="25">
+   <BOUNDS type="Node" left="5160" top="2235" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="23" srcpinname="X" dstnodeid="25" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="xy" dstnodeid="23" dstpinname="XY">
+   </LINK>
+   <PACK Name="Image" Version="0.2.0">
    </PACK>
    </PATCH>

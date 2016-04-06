@@ -137,7 +137,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4275" top="465" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="-1" pintype="Input" values="-0.425">
+   <PIN pinname="Y Input Value" slicecount="1" visible="-1" pintype="Input" values="-0.5">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -147,7 +147,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="-1" pintype="Output">
    </PIN>
-   <PIN pinname="X Input Value" visible="1" pintype="Input" slicecount="1" values="0.0915492957746476">
+   <PIN pinname="X Input Value" visible="1" pintype="Input" slicecount="1" values="-0.232394366197183">
    </PIN>
    <PIN pinname="Sticky Slider" slicecount="1" values="1">
    </PIN>
@@ -173,7 +173,7 @@
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="|0.00000,0.84933,0.97832,1.00000|">
+   <PIN pinname="Input 2" slicecount="1" values="|0.00000,0.74760,0.78482,1.00000|">
    </PIN>
    </NODE>
    <LINK srcnodeid="19" srcpinname="Output" dstnodeid="1" dstpinname="Pen Color">
@@ -185,7 +185,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="690" top="870" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-0.19">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-0.21">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
