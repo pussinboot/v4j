@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\loop_it.v4p" scrollx="0" scrolly="0" systemname="loop_it" filename="C:\Code\vvvv\v4j\loop_it.v4p">
-   <BOUNDS type="Window" left="12675" top="3315" width="18465" height="12600">
+   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\loop_it.v4p" scrollx="7485" scrolly="915" systemname="loop_it" filename="C:\Code\vvvv\v4j\loop_it.v4p">
+   <BOUNDS type="Window" left="8985" top="3765" width="18465" height="12600">
    </BOUNDS>
    <NODE systemname="OSCDecoder (Network)" nodename="OSCDecoder (Network)" componentmode="Hidden" id="11">
    <BOUNDS type="Node" left="3150" top="3870" width="100" height="100">
@@ -427,7 +427,7 @@
    <PACK Name="Image" Version="0.2.0">
    </PACK>
    <NODE systemname="MIDINOTE (DEVICES)" nodename="MidiNote (Devices)" componentmode="Hidden" id="123">
-   <BOUNDS type="Node" left="9345" top="12105" width="1755" height="270">
+   <BOUNDS type="Node" left="9405" top="12120" width="1755" height="270">
    </BOUNDS>
    <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
    </PIN>
@@ -465,7 +465,7 @@
    </PIN>
    </NODE>
    <NODE systemname="FlipFlop (Animation)" nodename="FlipFlop (Animation)" componentmode="Hidden" id="120">
-   <BOUNDS type="Node" left="9330" top="13560" width="100" height="100">
+   <BOUNDS type="Node" left="9345" top="13650" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Set" visible="1" slicecount="2" values="0,0">
    </PIN>
@@ -493,7 +493,7 @@
    <NODE systemname="SwapDim (Spreads)" nodename="SwapDim (Spreads)" componentmode="Hidden" id="118">
    <BOUNDS type="Node" left="9330" top="12585" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="16" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -502,8 +502,6 @@
    <PIN pinname="Row Count" slicecount="1" values="2">
    </PIN>
    </NODE>
-   <LINK srcnodeid="123" srcpinname="Output" dstnodeid="118" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="118" srcpinname="Output" dstnodeid="119" dstpinname="Input">
    </LINK>
    <NODE id="117" systemname="Cross (2d)" nodename="Cross (2d)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
@@ -611,19 +609,15 @@
    </BOUNDS>
    <BOUNDS type="Window" left="6855" top="8595" width="9000" height="6000">
    </BOUNDS>
-   <PIN pinname="Channel" visible="1">
+   <PIN pinname="Channel" visible="1" slicecount="16" values="7,8,7,8,7,8,7,8,7,8,7,8,7,8,7,8">
    </PIN>
-   <PIN pinname="Note" visible="1">
+   <PIN pinname="Note" visible="1" slicecount="16" values="120,120,121,121,122,122,123,123,124,124,125,125,126,126,127,127">
    </PIN>
    <PIN pinname="Play" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Velocity" visible="1" slicecount="8" values="1,0,0,0,1,0,0,0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="117" srcpinname="X Out" dstnodeid="125" dstpinname="Channel">
-   </LINK>
-   <LINK srcnodeid="117" srcpinname="Y Out" dstnodeid="125" dstpinname="Note">
-   </LINK>
    <NODE systemname="MIDINOTE (DEVICES)" nodename="MidiNote (Devices)" componentmode="Hidden" id="137">
    <BOUNDS type="Node" left="3075" top="7095" width="1755" height="270">
    </BOUNDS>
@@ -783,15 +777,13 @@
    <NODE systemname="Unzip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (Value)" componentmode="Hidden" id="152">
    <BOUNDS type="Node" left="8655" top="12435" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="16" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Output 1" visible="1">
    </PIN>
    <PIN pinname="Output 2" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="123" srcpinname="Output" dstnodeid="152" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="152" srcpinname="Output 1" dstnodeid="151" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="150" srcpinname="Output" dstnodeid="146" dstpinname="Index">
@@ -1029,7 +1021,7 @@
    </PIN>
    <PIN pinname="Column Count" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Row Count" slicecount="1" values="2">
+   <PIN pinname="Row Count" slicecount="1" values="4">
    </PIN>
    </NODE>
    <LINK srcnodeid="165" srcpinname="Output" dstnodeid="169" dstpinname="Input">
@@ -1303,7 +1295,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Midi Input Port" visible="1" slicecount="1" values="|nanoPAD 1 PAD|">
+   <PIN pinname="Midi Input Port" visible="1" slicecount="1" values="|2- Twitch|">
    </PIN>
    </NODE>
    <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="191">
@@ -1476,8 +1468,6 @@
    </NODE>
    <LINK srcnodeid="201" srcpinname="Output Enum" dstnodeid="137" dstpinname="Midi Input Port">
    </LINK>
-   <LINK srcnodeid="201" srcpinname="Output Enum" dstnodeid="190" dstpinname="Midi Input Port">
-   </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="202" systemname="IOBox (Enumerations)">
    <BOUNDS type="Box" left="12975" top="18570" width="1590" height="270">
    </BOUNDS>
@@ -1495,7 +1485,137 @@
    <LINK srcnodeid="202" srcpinname="Output Enum" dstnodeid="192" dstpinname="Midi Output Port">
    </LINK>
    <LINK srcnodeid="201" srcpinname="Output Enum" dstnodeid="123" dstpinname="Midi Input Port">
-   <LINKPOINT x="3675" y="1695">
+   <LINKPOINT x="3695" y="1700">
    </LINKPOINT>
+   <LINKPOINT x="4090" y="11530">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="201" srcpinname="Output Enum" dstnodeid="190" dstpinname="Midi Input Port">
+   <LINKPOINT x="3930" y="10845">
+   </LINKPOINT>
+   </LINK>
+   <NODE id="203" systemname="Cross (2d)" nodename="Cross (2d)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <PIN pinname="Y Out" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="X Out" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="X In" visible="1" pintype="Input" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y In" visible="1" pintype="Input" slicecount="1" values="0">
+   </PIN>
+   <BOUNDS type="Node" left="10665" top="11505" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Include Upper" pintype="Input" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Include Lower" pintype="Input" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Include Equal" pintype="Input" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="122" srcpinname="Output" dstnodeid="203" dstpinname="Y In">
+   </LINK>
+   <NODE systemname="I (Spreads)" nodename="I (Spreads)" componentmode="Hidden" id="204">
+   <BOUNDS type="Node" left="10635" top="11055" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="[ From .." slicecount="1" values="10">
+   </PIN>
+   <PIN pinname=".. To [" slicecount="1" values="8">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="204" srcpinname="Output" dstnodeid="203" dstpinname="X In">
+   </LINK>
+   <NODE systemname="MIDINOTE (DEVICES)" nodename="MidiNote (Devices)" componentmode="Hidden" id="205">
+   <BOUNDS type="Node" left="11730" top="12090" width="1755" height="270">
+   </BOUNDS>
+   <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Buffer Length" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Channel" slicecount="1" visible="1" values="7">
+   </PIN>
+   <PIN pinname="Note" slicecount="2" visible="1" values="120,124">
+   </PIN>
+   <PIN pinname="On Data" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Midi Input Port" visible="1" slicecount="1" values="|nanoPAD 1 PAD|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="201" srcpinname="Output Enum" dstnodeid="205" dstpinname="Midi Input Port">
+   <LINKPOINT x="4230" y="11355">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="203" srcpinname="X Out" dstnodeid="205" dstpinname="Channel">
+   </LINK>
+   <LINK srcnodeid="203" srcpinname="Y Out" dstnodeid="205" dstpinname="Note">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="206">
+   <BOUNDS type="Node" left="10155" top="12405" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="123" srcpinname="Output" dstnodeid="206" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="205" srcpinname="Output" dstnodeid="206" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="206" srcpinname="Output" dstnodeid="152" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="206" srcpinname="Output" dstnodeid="118" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Cons (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (Spreads)" componentmode="Hidden" id="208">
+   <BOUNDS type="Node" left="9435" top="17400" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="121" srcpinname="Output" dstnodeid="208" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="204" srcpinname="Output" dstnodeid="208" dstpinname="Input 2">
+   </LINK>
+   <NODE id="209" systemname="Cross (2d)" nodename="Cross (2d)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <PIN pinname="Y Out" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="X Out" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="X In" visible="1" pintype="Input" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y In" visible="1" pintype="Input" slicecount="1" values="0">
+   </PIN>
+   <BOUNDS type="Node" left="9435" top="17790" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Include Upper" pintype="Input" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Include Lower" pintype="Input" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Include Equal" pintype="Input" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="208" srcpinname="Output" dstnodeid="209" dstpinname="X In">
+   </LINK>
+   <LINK srcnodeid="122" srcpinname="Output" dstnodeid="209" dstpinname="Y In">
+   </LINK>
+   <LINK srcnodeid="209" srcpinname="X Out" dstnodeid="125" dstpinname="Channel">
+   </LINK>
+   <LINK srcnodeid="209" srcpinname="Y Out" dstnodeid="125" dstpinname="Note">
    </LINK>
    </PATCH>
