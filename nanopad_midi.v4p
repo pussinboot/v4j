@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
    <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\nanopad_midi.v4p" scrollx="0" scrolly="0" systemname="nanopad_midi" filename="C:\Users\Leo\Documents\GitHub\v4j\nanopad_midi.v4p">
-   <BOUNDS type="Window" left="9075" top="4095" width="11595" height="8070">
+   <BOUNDS type="Window" left="11595" top="5385" width="11595" height="8070">
    </BOUNDS>
    <NODE systemname="MidiController (Devices)" nodename="MidiController (Devices)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2925" top="1470" width="100" height="100">
@@ -21,7 +21,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2280" top="240" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,1,16">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="1,2,16">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -87,7 +87,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7185" top="300" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="|nanoPAD 1 PAD|">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="|nanoPAD2 1 PAD|">
    </PIN>
    <PIN pinname="Output Enum" visible="1">
    </PIN>
@@ -99,11 +99,11 @@
    <LINK srcnodeid="11" srcpinname="Output Enum" dstnodeid="10" dstpinname="Midi Input Port">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="12" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="4410" top="270" width="1260" height="600">
+   <BOUNDS type="Box" left="4410" top="270" width="1785" height="660">
    </BOUNDS>
    <BOUNDS type="Node" left="4410" top="270" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="12" visible="1" values="39,48,45,43,51,49,36,38,40,42,44,46">
+   <PIN pinname="Y Input Value" slicecount="16" visible="1" values="37,39,41,43,45,47,49,51,36,38,40,42,44,46,48,50">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -111,7 +111,7 @@
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
-   <PIN pinname="Columns" slicecount="1" values="6">
+   <PIN pinname="Columns" slicecount="1" values="8">
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
@@ -121,7 +121,7 @@
    <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="10" dstpinname="Note">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="14" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="5280" top="2100" width="2835" height="1335">
+   <BOUNDS type="Box" left="5280" top="2100" width="3360" height="1290">
    </BOUNDS>
    <BOUNDS type="Node" left="5280" top="2100" width="0" height="0">
    </BOUNDS>
@@ -133,7 +133,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Columns" slicecount="1" values="6">
+   <PIN pinname="Columns" slicecount="1" values="8">
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="2">
    </PIN>
@@ -167,7 +167,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Columns" slicecount="1" values="6">
+   <PIN pinname="Columns" slicecount="1" values="8">
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="1">
    </PIN>
@@ -191,7 +191,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Columns" slicecount="1" values="6">
+   <PIN pinname="Columns" slicecount="1" values="8">
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="1">
    </PIN>
@@ -211,7 +211,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Column Count" slicecount="1" values="6">
+   <PIN pinname="Column Count" slicecount="1" values="8">
    </PIN>
    <PIN pinname="Row Count" slicecount="1" values="2">
    </PIN>
@@ -337,7 +337,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6420" top="7005" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="6" visible="1" values="0,0,0,0,0,0">
+   <PIN pinname="Y Input Value" slicecount="8" visible="1" values="0,0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -345,15 +345,15 @@
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
-   <PIN pinname="Columns" slicecount="1" values="6">
+   <PIN pinname="Columns" slicecount="1" values="8">
    </PIN>
    </NODE>
    <LINK srcnodeid="28" srcpinname="Y Output Value" dstnodeid="26" dstpinname="Spread">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="29" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="6435" top="10035" width="795" height="240">
+   <BOUNDS type="Box" left="5220" top="10200" width="1980" height="255">
    </BOUNDS>
-   <BOUNDS type="Node" left="6435" top="10035" width="0" height="0">
+   <BOUNDS type="Node" left="5220" top="10200" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -361,7 +361,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="top_select">
    </PIN>
-   <PIN pinname="Columns" slicecount="1" values="6">
+   <PIN pinname="Columns" slicecount="1" values="8">
    </PIN>
    </NODE>
    <LINK srcnodeid="26" srcpinname="Output" dstnodeid="29" dstpinname="Y Input Value">
@@ -407,7 +407,7 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="2">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="2" values="0.551181102362205,0.503937007874016" visible="1">
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0.551181102362205,0.503937007874016">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="xy">
    </PIN>
