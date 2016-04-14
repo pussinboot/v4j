@@ -123,7 +123,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="3075" top="150" type="Box" width="345">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="16">
+   <PIN pinname="Y Input Value" slicecount="1" values="20">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -307,7 +307,7 @@
    </PIN>
    <PIN pinname="IndicesXYZ" visible="1">
    </PIN>
-   <PIN pinname="Update" slicecount="1" values="0" visible="1">
+   <PIN pinname="Update" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
@@ -315,7 +315,7 @@
    </PIN>
    <PIN pinname="Indices Bin Size" slicecount="1" values="-1">
    </PIN>
-   <PIN pinname="NormalsXYZ" slicecount="1" values="0">
+   <PIN pinname="NormalsXYZ" slicecount="1" values="0" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="16" srcpinname="Output" dstnodeid="0" dstpinname="IndicesXYZ">
@@ -323,7 +323,7 @@
    <NODE systemname="Constant (DX11.Effect)" filename="%VVVV%\packs\dx11\nodes\dx11\Constant.fx" nodename="Constant (DX11.Effect)" componentmode="Hidden" id="31">
    <BOUNDS type="Node" left="4830" top="6435" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Geometry" visible="1">
+   <PIN pinname="Geometry" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -338,8 +338,6 @@
    <PIN pinname="Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Geometry Out" dstnodeid="31" dstpinname="Geometry">
-   </LINK>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="32">
    <BOUNDS type="Node" left="3810" top="7230" width="100" height="100">
    </BOUNDS>
@@ -378,6 +376,8 @@
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
    <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="35" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Update">
@@ -467,9 +467,9 @@
    </PIN>
    <PIN pinname="y" visible="1" slicecount="16" values="-0.75,-0.75,-0.75,-0.75,-0.25,-0.25,-0.25,-0.25,0.25,0.25,0.25,0.25,0.75,0.75,0.75,0.75">
    </PIN>
-   <PIN pinname="amp" slicecount="1" values="0.16">
+   <PIN pinname="amp" slicecount="1" values="-0.09">
    </PIN>
-   <PIN pinname="freq" slicecount="1" values="5.63">
+   <PIN pinname="freq" slicecount="1" values="3.21">
    </PIN>
    <PIN pinname="t" visible="1">
    </PIN>
@@ -521,5 +521,27 @@
    <LINK srcnodeid="31" srcpinname="Layer" dstnodeid="32" dstpinname="Layers">
    </LINK>
    <LINK srcnodeid="33" srcpinname="Render State" dstnodeid="31" dstpinname="Render State">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Geometry Out" dstnodeid="31" dstpinname="Geometry">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="52" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2190" top="5520" width="795" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2190" top="5520" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,0,1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="52" srcpinname="Y Output Value" dstnodeid="0" dstpinname="NormalsXYZ">
    </LINK>
    </PATCH>
