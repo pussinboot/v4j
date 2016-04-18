@@ -1,0 +1,139 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\Code\vvvv\v4j\plain_mirror.v4p" systemname="plain_mirror" filename="C:\Code\vvvv\v4j\plain_mirror.v4p" scrollx="75" scrolly="45">
+   <BOUNDS type="Window" left="9900" top="6000" width="9000" height="6000">
+   </BOUNDS>
+   <NODE systemname="FileStream (DX11.Texture Vlc)" filename="%VVVV%\packs\dx11\nodes\plugins\vlc\VVVV.DX11.Nodes.Vlc.dll" nodename="FileStream (DX11.Texture Vlc)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="3750" top="885" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Volume" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Filename" slicecount="1" values="|..\..\..\Users\Public\Videos\Sample Videos\Wildlife.wmv|">
+   </PIN>
+   <PIN pinname="Play" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Loop" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Do Seek" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Speed" slicecount="1" values="1.68">
+   </PIN>
+   <PIN pinname="Reset Start" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Seek Time" slicecount="1" values="1.39">
+   </PIN>
+   <PIN pinname="Position" visible="1">
+   </PIN>
+   <PIN pinname="Duration" visible="1">
+   </PIN>
+   </NODE>
+   <PACK Name="addonpack" Version="34.1.0">
+   </PACK>
+   <NODE systemname="PlainMirror (DX11.TextureFX)" filename="dx11\plugins\PlainMirror.tfx" nodename="PlainMirror (DX11.TextureFX)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="4440" top="2460" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="centerXY" slicecount="2" visible="1" values="-0.5,-0.5">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Texture Out" dstnodeid="1" dstpinname="Texture In">
+   </LINK>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="2">
+   <BOUNDS type="Node" left="4155" top="3315" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4155" top="3315" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="2385" top="8730" width="6120" height="4860">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Texture Out" dstnodeid="2" dstpinname="Texture In">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="4">
+   <BOUNDS type="Node" left="5970" top="900" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5970" top="900" width="945" height="705">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="-1" pintype="Input" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="X Output Value" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Slider">
+   </PIN>
+   <PIN pinname="Slider Constraints" slicecount="1" values="None">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="-0.5">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="-0.5">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="5640" top="1830" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="X Output Value" dstnodeid="5" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="5" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="XY" dstnodeid="1" dstpinname="centerXY">
+   </LINK>
+   <NODE systemname="Subtract (Value)" nodename="Subtract (Value)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="4455" top="1365" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Position" dstnodeid="6" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Duration" dstnodeid="6" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="LT (Value)" nodename="LT (Value)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="4530" top="1800" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" slicecount="1" values="-0.14">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="8" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="4800" top="1380" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="9" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Output 1" dstnodeid="0" dstpinname="Do Seek">
+   </LINK>
+   </PATCH>
