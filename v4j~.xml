@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\v4j.v4p" systemname="v4j" filename="C:\Users\Leo\Documents\GitHub\v4j\v4j.v4p" scrollx="0" scrolly="1125">
+   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\v4j.v4p" systemname="v4j" filename="C:\Users\Leo\Documents\GitHub\v4j\v4j.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="705" top="555" width="27480" height="16695">
    </BOUNDS>
    <NODE systemname="Blend (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Mixer\Blend.tfx" nodename="Blend (DX11.TextureFX)" componentmode="Hidden" id="12">
@@ -65,7 +65,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3225" top="16905" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="29085" top="300" width="14010" height="8460">
+   <BOUNDS type="Window" left="36120" top="12585" width="14010" height="8460">
    </BOUNDS>
    <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>
@@ -241,6 +241,8 @@
    </PIN>
    <PIN pinname="midi output" visible="1">
    </PIN>
+   <BOUNDS type="Window" left="13185" top="8535" width="9000" height="6000">
+   </BOUNDS>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="48" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="2835" top="5625" width="480" height="480">
@@ -563,7 +565,7 @@
    </PIN>
    <PIN pinname="to" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="sizeXY" slicecount="2" values="9.9,9.9">
+   <PIN pinname="sizeXY" slicecount="2" values="9.9,9.9" visible="1">
    </PIN>
    <PIN pinname="smoothness" slicecount="1" values="0.8">
    </PIN>
@@ -823,6 +825,10 @@
    </PIN>
    <PIN pinname="Texture" visible="1">
    </PIN>
+   <PIN pinname="Texture Width" visible="1">
+   </PIN>
+   <PIN pinname="Texture Height" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="91">
    <BOUNDS type="Node" left="5130" top="2250" width="100" height="100">
@@ -830,6 +836,10 @@
    <PIN pinname="SpoutSenderName" visible="1">
    </PIN>
    <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Texture Width" visible="1">
+   </PIN>
+   <PIN pinname="Texture Height" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="22" srcpinname="Output String" dstnodeid="91" dstpinname="SpoutSenderName">
@@ -1011,5 +1021,49 @@
    <LINK srcnodeid="102" srcpinname="X" dstnodeid="92" dstpinname="Rotate">
    </LINK>
    <LINK srcnodeid="102" srcpinname="Y" dstnodeid="92" dstpinname="CellRotate">
+   </LINK>
+   <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="103">
+   <BOUNDS type="Node" left="4650" top="4395" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Max (Value)" nodename="Max (Value)" componentmode="Hidden" id="104">
+   <BOUNDS type="Node" left="3690" top="2700" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="width">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Max (Value)" nodename="Max (Value)" componentmode="Hidden" id="105">
+   <BOUNDS type="Node" left="6120" top="2715" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="height">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="90" srcpinname="Texture Width" dstnodeid="104" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="91" srcpinname="Texture Width" dstnodeid="104" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="91" srcpinname="Texture Height" dstnodeid="105" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="90" srcpinname="Texture Height" dstnodeid="105" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="104" srcpinname="Output" dstnodeid="103" dstpinname="X">
    </LINK>
    </PATCH>

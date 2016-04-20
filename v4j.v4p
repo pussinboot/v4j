@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\v4j.v4p" systemname="v4j" filename="C:\Users\Leo\Documents\GitHub\v4j\v4j.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\v4j.v4p" systemname="v4j" filename="C:\Users\Leo\Documents\GitHub\v4j\v4j.v4p" scrollx="0" scrolly="1725">
    <BOUNDS type="Window" left="705" top="555" width="27480" height="16695">
    </BOUNDS>
    <NODE systemname="Blend (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Mixer\Blend.tfx" nodename="Blend (DX11.TextureFX)" componentmode="Hidden" id="12">
@@ -65,7 +65,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3225" top="16905" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="36120" top="12585" width="14010" height="8460">
+   <BOUNDS type="Window" left="29715" top="6270" width="14010" height="8460">
    </BOUNDS>
    <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>
@@ -565,7 +565,7 @@
    </PIN>
    <PIN pinname="to" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="sizeXY" slicecount="2" values="9.9,9.9" visible="1">
+   <PIN pinname="sizeXY" slicecount="2" visible="1" values="9.9,9.9">
    </PIN>
    <PIN pinname="smoothness" slicecount="1" values="0.8">
    </PIN>
@@ -818,40 +818,6 @@
    </NODE>
    <LINK srcnodeid="72" srcpinname="Output Enum" dstnodeid="46" dstpinname="midi output">
    </LINK>
-   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="90">
-   <BOUNDS type="Node" left="3045" top="2190" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="SpoutSenderName" visible="1">
-   </PIN>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="Texture Width" visible="1">
-   </PIN>
-   <PIN pinname="Texture Height" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="91">
-   <BOUNDS type="Node" left="5130" top="2250" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="SpoutSenderName" visible="1">
-   </PIN>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="Texture Width" visible="1">
-   </PIN>
-   <PIN pinname="Texture Height" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="22" srcpinname="Output String" dstnodeid="91" dstpinname="SpoutSenderName">
-   </LINK>
-   <LINK srcnodeid="91" srcpinname="Texture" dstnodeid="43" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="26" srcpinname="Output String" dstnodeid="90" dstpinname="SpoutSenderName">
-   <LINKPOINT x="3165" y="2205">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="90" srcpinname="Texture" dstnodeid="42" dstpinname="Input Node">
-   </LINK>
    <NODE systemname="Kaleidoscope (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\Kaleidoscope.tfx" nodename="Kaleidoscope (DX11.TextureFX)" componentmode="Hidden" id="92">
    <BOUNDS type="Node" left="5490" top="15990" width="100" height="100">
    </BOUNDS>
@@ -1035,9 +1001,9 @@
    <NODE systemname="Max (Value)" nodename="Max (Value)" componentmode="Hidden" id="104">
    <BOUNDS type="Node" left="3690" top="2700" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="720">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="628">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="width">
    </PIN>
@@ -1049,21 +1015,37 @@
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="height">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="528">
    </PIN>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="480">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="90" srcpinname="Texture Width" dstnodeid="104" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="91" srcpinname="Texture Width" dstnodeid="104" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="91" srcpinname="Texture Height" dstnodeid="105" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="90" srcpinname="Texture Height" dstnodeid="105" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="104" srcpinname="Output" dstnodeid="103" dstpinname="X">
+   </LINK>
+   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="107">
+   <BOUNDS type="Node" left="2790" top="2175" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="SpoutSenderName" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="108">
+   <BOUNDS type="Node" left="5100" top="2325" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="SpoutSenderName" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="22" srcpinname="Output String" dstnodeid="108" dstpinname="SpoutSenderName">
+   </LINK>
+   <LINK srcnodeid="108" srcpinname="Texture" dstnodeid="43" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Output String" dstnodeid="107" dstpinname="SpoutSenderName">
+   </LINK>
+   <LINK srcnodeid="107" srcpinname="Texture" dstnodeid="42" dstpinname="Input Node">
    </LINK>
    </PATCH>
