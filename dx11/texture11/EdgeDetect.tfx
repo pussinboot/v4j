@@ -18,6 +18,7 @@ struct psInput
 	float2 uv : TEXCOORD0;
 };
 
+#define bld(op,c0,c1) float4(lerp((c0*c0.a+c1*c1.a*(1-c0.a))/saturate(c0.a+c1.a*(1-c0.a)),(op),c0.a*c1.a).rgb,saturate(c0.a+c1.a*(1-c0.a)))
 
 float4 PS(psInput input) : SV_Target
 {
@@ -49,8 +50,9 @@ float4 PS(psInput input) : SV_Target
   } else {
     col = float4(1,1,1,1);
   }
- 
-  return col;
+  float4 c0 = texture2d.Sample(linearSampler, input.uv);
+  float4 c=bld(c0-col,c0,c0);
+  return c;
 }
 
 
