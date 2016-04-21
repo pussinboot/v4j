@@ -1,17 +1,11 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\fft_clip_control.v4p" scrollx="270" scrolly="1305" systemname="fft_clip_control" filename="C:\Code\vvvv\v4j\fft_clip_control.v4p">
-   <BOUNDS type="Window" left="15435" top="7830" width="9000" height="7110">
+   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\fft_clip_control.v4p" scrollx="105" scrolly="420" systemname="fft_clip_control" filename="C:\Code\vvvv\v4j\fft_clip_control.v4p">
+   <BOUNDS type="Window" left="12780" top="9525" width="9000" height="7110">
    </BOUNDS>
-   <NODE systemname="FFT (DShow9 4Channels)" filename="%VVVV%\lib\nodes\modules\DShow9\FFT (DShow9 4Channels).v4p" nodename="FFT (DShow9 4Channels)" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="2295" top="645" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="AsSpreadOut" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\modules\Value\BeatDetector (Value).v4p" id="4" nodename="BeatDetector (Value)" systemname="BeatDetector (Value)">
    <BOUNDS height="100" left="3150" top="1290" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="1">
+   <PIN pinname="Input" visible="1" slicecount="4" values="0.30102365506467,0.369575567935741,0.184156598817768,0.509570930122724">
    </PIN>
    <PIN pinname="BangOut" visible="1">
    </PIN>
@@ -22,8 +16,6 @@
    <PIN pinname="DecayOut" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="2" srcpinname="AsSpreadOut" dstnodeid="4" dstpinname="Input">
-   </LINK>
    <NODE systemname="UDP (Network Client)" nodename="UDP (Network Client)" componentmode="Hidden" id="17">
    <BOUNDS type="Node" left="3435" top="6750" width="1485" height="270">
    </BOUNDS>
@@ -287,7 +279,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1770" top="1260" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -297,7 +289,9 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="onbeat/continuous">
    </PIN>
    </NODE>
    <LINK srcnodeid="42" srcpinname="Y Output Value" dstnodeid="39" dstpinname="Switch">
@@ -543,6 +537,8 @@
    </PIN>
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|select bucket|">
+   </PIN>
    </NODE>
    <LINK srcnodeid="47" srcpinname="Output" dstnodeid="62" dstpinname="Input">
    </LINK>
@@ -626,4 +622,20 @@
    </NODE>
    <PACK Name="Image" Version="0.2.0">
    </PACK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="70" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3120" top="720" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3120" top="720" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="0.30102365506467,0.369575567935741,0.184156598817768,0.509570930122724">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|fft input|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="70" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Input">
+   </LINK>
    </PATCH>
