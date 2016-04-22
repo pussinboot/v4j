@@ -485,9 +485,9 @@
    <LINK srcnodeid="55" srcpinname="XYZW" dstnodeid="47" dstpinname="Source Maximum">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="59" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="5460" top="4230" width="975" height="600">
+   <BOUNDS type="Box" left="4695" top="330" width="975" height="600">
    </BOUNDS>
-   <BOUNDS type="Node" left="5460" top="4230" width="0" height="0">
+   <BOUNDS type="Node" left="4695" top="330" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1,1">
    </PIN>
@@ -506,6 +506,8 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    <PIN pinname="X Input Value" slicecount="2" values="1,1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|l/r select|">
    </PIN>
    </NODE>
    <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="62">
