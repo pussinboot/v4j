@@ -1,37 +1,7 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
    <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\datamosh.v4p" scrollx="0" scrolly="1020" systemname="datamosh" filename="C:\Users\Leo\Documents\GitHub\v4j\datamosh.v4p">
-   <BOUNDS type="Window" left="12825" top="6030" width="15255" height="10380">
+   <BOUNDS type="Window" left="14490" top="11295" width="15255" height="10380">
    </BOUNDS>
-   <NODE systemname="datamosh (DX11.TextureFX)" filename="..\..\..\..\..\VJ\vvvv\fx\datamosh.tfx" nodename="datamosh (DX11.TextureFX)" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="1425" top="4605" width="2610" height="270">
-   </BOUNDS>
-   <PIN pinname="Texture Out" visible="1">
-   </PIN>
-   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Technique" slicecount="1" values="DataMosh">
-   </PIN>
-   <PIN pinname="texture2dnext" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="ResolutionXY" visible="1" slicecount="2" values="640,460">
-   </PIN>
-   <PIN pinname="coef" slicecount="1" visible="1" values="0.4">
-   </PIN>
-   <PIN pinname="colorToDiscardXYZW" slicecount="4" visible="1" values="0.63,0.63,0.63,0.63">
-   </PIN>
-   <PIN pinname="Tex1" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="centerXY" slicecount="2" visible="1" values="0,0">
-   </PIN>
-   <PIN pinname="ColorToDiscard" slicecount="1" values="|0.22164,0.22164,0.22164,0.00000|">
-   </PIN>
-   <PIN pinname="ColorToDiscardXYZW" slicecount="4" values="0.67,0.67,0.67,0.67">
-   </PIN>
-   <PIN pinname="Thresshold" visible="1" slicecount="1" values="0.99">
-   </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="1" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="FrameDelay (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FrameDelay (DX11.Texture 2d)" componentmode="Hidden" id="3">
    <BOUNDS type="Node" left="3015" top="4050" width="100" height="100">
    </BOUNDS>
@@ -44,14 +14,6 @@
    </NODE>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
-   <LINK srcnodeid="0" srcpinname="Texture Out" dstnodeid="3" dstpinname="Texture In" linkstyle="Bezier" hiddenwhenlocked="1">
-   <LINKPOINT x="1455" y="4430">
-   </LINKPOINT>
-   <LINKPOINT x="3045" y="4465">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="3" srcpinname="Texture Out" dstnodeid="0" dstpinname="Tex1">
-   </LINK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="9">
    <BOUNDS type="Node" left="3840" top="3105" width="100" height="100">
    </BOUNDS>
@@ -75,15 +37,13 @@
    <NODE systemname="Pipet (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\modules\Pipet\Pipet (DX11.Texture 2d).v4p" nodename="Pipet (DX11.Texture 2d)" componentmode="Hidden" id="24">
    <BOUNDS type="Node" left="6315" top="4680" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Texture" visible="1">
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Color" visible="1">
    </PIN>
    <PIN pinname="XY" slicecount="2" visible="1" values="0.36,0.36">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Texture Out" dstnodeid="24" dstpinname="Texture">
-   </LINK>
    <NODE systemname="RGB (Color Split Vector)" filename="%VVVV%\addonpack\lib\nodes\plugins\VVVV.Nodes.RGBVector.dll" nodename="RGB (Color Split Vector)" componentmode="Hidden" id="26">
    <BOUNDS type="Node" left="6240" top="5235" width="100" height="100">
    </BOUNDS>
@@ -102,8 +62,6 @@
    <PIN pinname="Output 1" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="27" srcpinname="Output 1" dstnodeid="0" dstpinname="colorToDiscardXYZW">
-   </LINK>
    <NODE systemname="Mean (Spectral)" nodename="Mean (Spectral)" componentmode="Hidden" id="29">
    <BOUNDS type="Node" left="6255" top="5760" width="100" height="100">
    </BOUNDS>
@@ -219,7 +177,7 @@
    <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="37">
    <BOUNDS type="Node" left="4515" top="4140" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0.00946583610128454">
    </PIN>
    <PIN pinname="Destination Minimum" slicecount="1" values="0.52">
    </PIN>
@@ -228,10 +186,6 @@
    <PIN pinname="Destination Maximum" slicecount="1" values="0.66">
    </PIN>
    </NODE>
-   <LINK srcnodeid="36" srcpinname="Output" dstnodeid="37" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="37" srcpinname="Output" dstnodeid="0" dstpinname="Thresshold">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="39" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="1290" top="1500" width="795" height="240">
    </BOUNDS>
@@ -241,9 +195,9 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Texture In|">
    </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="39" srcpinname="Output Node" dstnodeid="0" dstpinname="Texture In">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="40" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="1320" top="6015" width="795" height="240">
    </BOUNDS>
@@ -251,9 +205,9 @@
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Texture Out|">
    </PIN>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Texture Out" dstnodeid="40" dstpinname="Input Node">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="41" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="3225" top="1515" width="480" height="480">
    </BOUNDS>
@@ -271,9 +225,9 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="41" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Enabled">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="42" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="2355" top="2040" width="795" height="480">
    </BOUNDS>
@@ -294,18 +248,54 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Subtract (Value)" nodename="Subtract (Value)" componentmode="Hidden" id="44">
-   <BOUNDS type="Node" left="2325" top="2775" width="100" height="100">
+   <NODE systemname="datamosh (DX11.TextureFX)" filename="dx11\datamosh.tfx" nodename="datamosh (DX11.TextureFX)" componentmode="Hidden" id="43">
+   <BOUNDS type="Node" left="2415" top="4800" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 2" slicecount="1" values="0.5">
+   <PIN pinname="Thresshold" visible="1">
    </PIN>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Texture In" visible="1">
    </PIN>
-   <PIN pinname="Output" visible="1">
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Tex1" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="colorToDiscardXYZW" visible="1">
+   </PIN>
+   <PIN pinname="centerXY" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="42" srcpinname="Y Output Value" dstnodeid="44" dstpinname="Input 1">
+   <LINK srcnodeid="37" srcpinname="Output" dstnodeid="43" dstpinname="Thresshold">
    </LINK>
-   <LINK srcnodeid="44" srcpinname="Output" dstnodeid="0" dstpinname="centerXY">
+   <LINK srcnodeid="39" srcpinname="Output Node" dstnodeid="43" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="43" srcpinname="Texture Out" dstnodeid="40" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="43" srcpinname="Texture Out" dstnodeid="3" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Texture Out" dstnodeid="43" dstpinname="Tex1">
+   </LINK>
+   <LINK srcnodeid="41" srcpinname="Y Output Value" dstnodeid="43" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="27" srcpinname="Output 1" dstnodeid="43" dstpinname="colorToDiscardXYZW">
+   </LINK>
+   <LINK srcnodeid="42" srcpinname="Y Output Value" dstnodeid="43" dstpinname="centerXY">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="44" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4485" top="1545" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4485" top="1545" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.00946583610128454">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="thresh">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="44" srcpinname="Y Output Value" dstnodeid="37" dstpinname="Input">
    </LINK>
    </PATCH>

@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\nanopad_midi.v4p" scrollx="0" scrolly="0" systemname="nanopad_midi" filename="C:\Users\Leo\Documents\GitHub\v4j\nanopad_midi.v4p">
-   <BOUNDS type="Window" left="11595" top="5385" width="11595" height="8070">
+   <PATCH nodename="C:\Code\vvvv\v4j\nanopad_midi.v4p" scrollx="0" scrolly="0" systemname="nanopad_midi" filename="C:\Users\Leo\Documents\GitHub\v4j\nanopad_midi.v4p">
+   <BOUNDS type="Window" left="7815" top="5460" width="11595" height="8070">
    </BOUNDS>
    <NODE systemname="MidiController (Devices)" nodename="MidiController (Devices)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2925" top="1470" width="100" height="100">
@@ -145,7 +145,7 @@
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="Unzip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (Value)" componentmode="Hidden" id="15">
-   <BOUNDS type="Node" left="6465" top="4170" width="100" height="100">
+   <BOUNDS type="Node" left="5640" top="4140" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="12" values="0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
@@ -179,9 +179,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="18" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="5580" top="6060" width="2940" height="630">
+   <BOUNDS type="Box" left="5640" top="6060" width="2940" height="630">
    </BOUNDS>
-   <BOUNDS type="Node" left="5580" top="6060" width="0" height="0">
+   <BOUNDS type="Node" left="5640" top="6060" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -251,7 +251,7 @@
    </PIN>
    <PIN pinname="Spread" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Index" visible="1" slicecount="1" values="0">
+   <PIN pinname="Index" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -290,8 +290,6 @@
    </LINK>
    <LINK srcnodeid="21" srcpinname="Output" dstnodeid="23" dstpinname="Set">
    </LINK>
-   <LINK srcnodeid="23" srcpinname="Output" dstnodeid="26" dstpinname="Index">
-   </LINK>
    <NODE systemname="GT (Value)" nodename="GT (Value)" componentmode="Hidden" id="27">
    <BOUNDS type="Node" left="5610" top="7665" width="100" height="100">
    </BOUNDS>
@@ -303,7 +301,7 @@
    </PIN>
    </NODE>
    <NODE id="24" systemname="Sift (Value)" nodename="Sift (Value)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <PIN pinname="Input" visible="1" slicecount="6" pintype="Input" values="0,0,0,0,0,0">
+   <PIN pinname="Input" visible="1" slicecount="8" pintype="Input" values="0,0,0,0,0,0,0,0">
    </PIN>
    <BOUNDS type="Node" left="5475" top="8520" width="100" height="100">
    </BOUNDS>
@@ -327,8 +325,6 @@
    <LINK srcnodeid="24" srcpinname="Filter Index" dstnodeid="22" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="24" srcpinname="Input Index" dstnodeid="23" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="27" srcpinname="Output" dstnodeid="24" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="27" dstpinname="Input 1">
    </LINK>
@@ -575,5 +571,133 @@
    <LINK srcnodeid="52" srcpinname="Sign Part" dstnodeid="53" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="53" srcpinname="Output" dstnodeid="32" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="OnOpen (VVVV)" nodename="OnOpen (VVVV)" componentmode="Hidden" id="54">
+   <BOUNDS type="Node" left="4755" top="7650" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Bang" visible="1">
+   </PIN>
+   <PIN pinname="Simulate" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="55">
+   <BOUNDS type="Node" left="5445" top="8115" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="54" srcpinname="Bang" dstnodeid="55" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="23" srcpinname="Output" dstnodeid="26" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="27" srcpinname="Output" dstnodeid="55" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="55" srcpinname="Output" dstnodeid="24" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="57">
+   <BOUNDS type="Node" left="8865" top="7995" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="8" values="0,0,0,0,0,0,0,0">
+   </PIN>
+   </NODE>
+   <NODE id="58" systemname="Sift (Value)" nodename="Sift (Value)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <PIN pinname="Input" visible="1" slicecount="8" pintype="Input" values="0,0,0,0,0,0,0,0">
+   </PIN>
+   <BOUNDS type="Node" left="8865" top="8715" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Find" slicecount="1" pintype="Input" visible="1" values="Last">
+   </PIN>
+   <PIN pinname="Filter" slicecount="1" pintype="Input" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Input Index" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="Filter Index" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="Hits" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Epsilon" pintype="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <NODE systemname="S+H (Animation)" nodename="S+H (Animation)" componentmode="Hidden" id="60">
+   <BOUNDS type="Node" left="9645" top="9360" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Set" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|pb ind|">
+   </PIN>
+   </NODE>
+   <NODE systemname="Subtract (Value)" nodename="Subtract (Value)" componentmode="Hidden" id="59">
+   <BOUNDS type="Node" left="10320" top="8985" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="8" values="0,0,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="59" srcpinname="Output" dstnodeid="60" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="Input Index" dstnodeid="60" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="61" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="9555" top="9870" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9555" top="9870" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="last_bot_ind">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="60" srcpinname="Output" dstnodeid="61" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="62">
+   <BOUNDS type="Node" left="10320" top="8640" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="8" values="0,0,0,0,0,0,0,0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="58" srcpinname="Filter Index" dstnodeid="62" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="62" srcpinname="OnChange" dstnodeid="59" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="65">
+   <BOUNDS type="Node" left="8985" top="8385" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="8" values="0,0,0,0,0,0,0,0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="57" srcpinname="OnChange" dstnodeid="65" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="65" srcpinname="Output" dstnodeid="58" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Output 2" dstnodeid="57" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Output 2" dstnodeid="65" dstpinname="Input 2">
    </LINK>
    </PATCH>
