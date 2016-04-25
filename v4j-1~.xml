@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\v4j-1.v4p" scrollx="1200" scrolly="0">
+   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\v4j-1.v4p" scrollx="1530" scrolly="0">
    <NODE systemname="datamosh" filename="datamosh.v4p" nodename="datamosh.v4p" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="4875" top="1740" width="100" height="100">
    </BOUNDS>
