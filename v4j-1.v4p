@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\v4j-1.v4p" scrollx="2130" scrolly="2235">
+   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\v4j-1.v4p" scrollx="675" scrolly="0">
    <NODE systemname="datamosh" filename="datamosh.v4p" nodename="datamosh.v4p" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="4875" top="1740" width="100" height="100">
    </BOUNDS>
@@ -59,6 +59,8 @@
    </PIN>
    <BOUNDS type="Box" left="4530" top="1200">
    </BOUNDS>
+   <PIN pinname="www" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="Kaleidoscope (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\Kaleidoscope.tfx" nodename="Kaleidoscope (DX11.TextureFX)" componentmode="Hidden" id="3">
    <BOUNDS type="Node" left="5175" top="4920" width="100" height="100">
@@ -154,7 +156,7 @@
    </LINK>
    <LINK srcnodeid="4" srcpinname="texture out" dstnodeid="5" dstpinname="texture in">
    </LINK>
-   <BOUNDS type="Window" left="11685" top="9585" width="15135" height="7800">
+   <BOUNDS type="Window" left="-420" top="9900" width="15135" height="7800">
    </BOUNDS>
    <NODE systemname="EdgeDetect (DX11.TextureFX)" filename="texture11\EdgeDetect.tfx" nodename="EdgeDetect (DX11.TextureFX)" componentmode="Hidden" id="22">
    <BOUNDS type="Node" left="4515" top="3765" width="100" height="100">
@@ -977,5 +979,7 @@
    <LINK srcnodeid="82" srcpinname="On Data" dstnodeid="75" dstpinname="Reset">
    </LINK>
    <LINK srcnodeid="74" srcpinname="Y" dstnodeid="3" dstpinname="CellRotate">
+   </LINK>
+   <LINK srcnodeid="42" srcpinname="Y Output Value" dstnodeid="2" dstpinname="www">
    </LINK>
    </PATCH>
