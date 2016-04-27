@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\v4j.v4p" systemname="v4j" filename="C:\Users\Leo\Documents\GitHub\v4j\v4j.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\v4j.v4p" systemname="v4j" filename="C:\Users\Leo\Documents\GitHub\v4j\v4j.v4p" scrollx="0" scrolly="840">
    <BOUNDS type="Window" left="705" top="555" width="27480" height="9345">
    </BOUNDS>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="13" systemname="IOBox (Value Advanced)">
@@ -689,6 +689,8 @@
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
+   <PIN pinname="controllable params" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="61" srcpinname="xy" dstnodeid="122" dstpinname="CellOffsetXY - xy_in">
    </LINK>
@@ -828,30 +830,6 @@
    </NODE>
    <LINK srcnodeid="112" srcpinname="send" dstnodeid="139" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="140">
-   <BOUNDS type="Node" left="2625" top="3000" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="SpoutSenderName" visible="1">
-   </PIN>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="141">
-   <BOUNDS type="Node" left="4965" top="2880" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="SpoutSenderName" visible="1">
-   </PIN>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="22" srcpinname="Output String" dstnodeid="141" dstpinname="SpoutSenderName">
-   </LINK>
-   <LINK srcnodeid="141" srcpinname="Texture" dstnodeid="43" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="26" srcpinname="Output String" dstnodeid="140" dstpinname="SpoutSenderName">
-   </LINK>
-   <LINK srcnodeid="140" srcpinname="Texture" dstnodeid="42" dstpinname="Input Node">
-   </LINK>
    <LINK srcnodeid="15" srcpinname="Actual BackBuffer SizeXY" dstnodeid="52" dstpinname="Default SizeXY">
    </LINK>
    <LINK srcnodeid="15" srcpinname="Actual BackBuffer SizeXY" dstnodeid="53" dstpinname="Default SizeXY">
@@ -860,4 +838,80 @@
    </LINK>
    <LINK srcnodeid="122" srcpinname="Texture Out" dstnodeid="138" dstpinname="Texture In">
    </LINK>
+   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="142">
+   <BOUNDS type="Node" left="3000" top="2910" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="SpoutSenderName" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="143">
+   <BOUNDS type="Node" left="5010" top="2925" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="SpoutSenderName" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="22" srcpinname="Output String" dstnodeid="143" dstpinname="SpoutSenderName">
+   </LINK>
+   <LINK srcnodeid="143" srcpinname="Texture" dstnodeid="43" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="142" srcpinname="Texture" dstnodeid="42" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Output String" dstnodeid="142" dstpinname="SpoutSenderName">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="144" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7710" top="9105" width="6165" height="315">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7710" top="9105" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="8">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="-1.25">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1.25">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Slider Constraints" slicecount="1" values="scY">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Slider">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="X Input Value" visible="1" pintype="Input" slicecount="8" values="0,0,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="8" values="0,0,0,1,-1,0,0,0">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Real">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|which slider|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="122" srcpinname="controllable params" dstnodeid="144" dstpinname="X Input Value">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="145" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="390" top="7965" width="5490" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="390" top="7965" width="3135" height="525">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|/to-do add ignored top row button &cr;&lf;which can be used to select fake bot ind|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
    </PATCH>
