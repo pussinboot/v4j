@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\v4j-1.v4p" scrollx="675" scrolly="0">
+   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\v4j-1.v4p" scrollx="765" scrolly="0">
    <NODE systemname="datamosh" filename="datamosh.v4p" nodename="datamosh.v4p" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="4875" top="1740" width="100" height="100">
    </BOUNDS>
@@ -747,7 +747,7 @@
    <NODE systemname="MidiController (Devices)" nodename="MidiController (Devices)" componentmode="Hidden" id="67">
    <BOUNDS type="Node" left="9585" top="675" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Channel" slicecount="1" values="7" visible="1">
+   <PIN pinname="Channel" slicecount="1" visible="1" values="7">
    </PIN>
    <PIN pinname="Controller" slicecount="1" values="7">
    </PIN>

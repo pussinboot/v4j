@@ -1087,7 +1087,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="11220" top="3750" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="-1,1">
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1,-1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
