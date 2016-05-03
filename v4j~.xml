@@ -863,9 +863,9 @@
    <LINK srcnodeid="26" srcpinname="Output String" dstnodeid="142" dstpinname="SpoutSenderName">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="144" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="7740" top="9180" width="6045" height="345">
+   <BOUNDS type="Box" left="7710" top="9105" width="6165" height="315">
    </BOUNDS>
-   <BOUNDS type="Node" left="7740" top="9180" width="0" height="0">
+   <BOUNDS type="Node" left="7710" top="9105" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -895,7 +895,23 @@
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|which slider|">
+   </PIN>
    </NODE>
    <LINK srcnodeid="122" srcpinname="controllable params" dstnodeid="144" dstpinname="X Input Value">
    </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="145" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="390" top="7965" width="5490" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="390" top="7965" width="3135" height="525">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|/to-do add ignored top row button &cr;&lf;which can be used to select fake bot ind|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
    </PATCH>
