@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\v4j-1.v4p" scrollx="765" scrolly="0">
+   <PATCH nodename="C:\Code\vvvv\v4j\v4j-1.v4p" scrollx="765" scrolly="0">
    <NODE systemname="datamosh" filename="datamosh.v4p" nodename="datamosh.v4p" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="4875" top="1740" width="100" height="100">
    </BOUNDS>
@@ -119,7 +119,7 @@
    </BOUNDS>
    <BOUNDS type="Window" left="12015" top="8055" width="9000" height="6000">
    </BOUNDS>
-   <PIN pinname="gain" visible="1" slicecount="1" values="1">
+   <PIN pinname="gain" visible="1" slicecount="1" values="0.5">
    </PIN>
    <PIN pinname="texture in" visible="1" slicecount="1" values="||">
    </PIN>
@@ -156,7 +156,7 @@
    </LINK>
    <LINK srcnodeid="4" srcpinname="texture out" dstnodeid="5" dstpinname="texture in">
    </LINK>
-   <BOUNDS type="Window" left="-420" top="9900" width="15135" height="7800">
+   <BOUNDS type="Window" left="2730" top="4635" width="15135" height="7800">
    </BOUNDS>
    <NODE systemname="EdgeDetect (DX11.TextureFX)" filename="texture11\EdgeDetect.tfx" nodename="EdgeDetect (DX11.TextureFX)" componentmode="Hidden" id="22">
    <BOUNDS type="Node" left="4515" top="3765" width="100" height="100">
@@ -724,10 +724,6 @@
    </LINK>
    <LINK srcnodeid="53" srcpinname="Output 1" dstnodeid="60" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="63" srcpinname="Output" dstnodeid="4" dstpinname="gain">
-   </LINK>
-   <LINK srcnodeid="62" srcpinname="Output" dstnodeid="5" dstpinname="gain">
-   </LINK>
    <NODE systemname="Divide (Value)" nodename="Divide (Value)" componentmode="Hidden" id="66">
    <BOUNDS type="Node" left="7935" top="5085" width="100" height="100">
    </BOUNDS>
@@ -1113,5 +1109,53 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="92" srcpinname="Output" dstnodeid="95" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="96">
+   <BOUNDS type="Node" left="7320" top="2820" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" slicecount="1" visible="1" values="5.01">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="63" srcpinname="Output" dstnodeid="96" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="96" srcpinname="Output" dstnodeid="4" dstpinname="gain">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="97" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5415" top="360" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5415" top="360" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="5.01">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|glitch gain|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="97" srcpinname="Y Output Value" dstnodeid="96" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="98">
+   <BOUNDS type="Node" left="7350" top="3300" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" slicecount="1" visible="1" values="5.01">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="62" srcpinname="Output" dstnodeid="98" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="98" srcpinname="Output" dstnodeid="5" dstpinname="gain">
+   </LINK>
+   <LINK srcnodeid="97" srcpinname="Y Output Value" dstnodeid="98" dstpinname="Input 1">
    </LINK>
    </PATCH>
