@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\v4j.v4p" systemname="v4j" filename="C:\Users\Leo\Documents\GitHub\v4j\v4j.v4p" scrollx="0" scrolly="45">
+   <PATCH nodename="C:\Users\Leo\Documents\GitHub\v4j\v4j.v4p" systemname="v4j" filename="C:\Users\Leo\Documents\GitHub\v4j\v4j.v4p" scrollx="0" scrolly="930">
    <BOUNDS type="Window" left="705" top="555" width="27480" height="9345">
    </BOUNDS>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="13" systemname="IOBox (Value Advanced)">
@@ -341,9 +341,9 @@
    <LINK srcnodeid="13" srcpinname="X Output Value" dstnodeid="50" dstpinname="Fader">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="58" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="3135" top="3315" width="3900" height="270">
+   <BOUNDS type="Node" left="3330" top="2655" width="3900" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="3135" top="3315" width="3900" height="270">
+   <BOUNDS type="Box" left="3330" top="2655" width="3900" height="270">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|/ on open you will have to replace the spoutreceivers|">
    </PIN>
@@ -411,9 +411,9 @@
    </LINKPOINT>
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="65" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="3075" top="7350" width="6945" height="420">
+   <BOUNDS type="Box" left="2790" top="7725" width="6945" height="420">
    </BOUNDS>
-   <BOUNDS type="Node" left="3075" top="7350" width="0" height="0">
+   <BOUNDS type="Node" left="2790" top="7725" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -594,6 +594,8 @@
    <PIN pinname="send" visible="1">
    </PIN>
    <PIN pinname="spec/any" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="outputed value" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="111" srcpinname="AsSpreadOut" dstnodeid="112" dstpinname="fft input">
@@ -848,30 +850,6 @@
    </NODE>
    <LINK srcnodeid="122" srcpinname="controllable params" dstnodeid="144" dstpinname="X Input Value">
    </LINK>
-   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="146">
-   <BOUNDS type="Node" left="2550" top="2850" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="SpoutSenderName" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="147">
-   <BOUNDS type="Node" left="4845" top="2910" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="SpoutSenderName" visible="1">
-   </PIN>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="22" srcpinname="Output String" dstnodeid="147" dstpinname="SpoutSenderName">
-   </LINK>
-   <LINK srcnodeid="147" srcpinname="Texture" dstnodeid="43" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="146" srcpinname="Texture" dstnodeid="42" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="26" srcpinname="Output String" dstnodeid="146" dstpinname="SpoutSenderName">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="148" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="13875" top="8070" width="480" height="480">
    </BOUNDS>
@@ -985,7 +963,7 @@
    <NODE systemname="Subtract (Value)" nodename="Subtract (Value)" componentmode="Hidden" id="155">
    <BOUNDS type="Node" left="930" top="5340" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" slicecount="1" values="1" visible="1">
+   <PIN pinname="Input 1" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
@@ -1011,5 +989,85 @@
    <LINK srcnodeid="156" srcpinname="Output" dstnodeid="155" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="137" srcpinname="Y Output Value" dstnodeid="154" dstpinname="Velocity">
+   </LINK>
+   <NODE systemname="I (Spreads)" nodename="I (Spreads)" componentmode="Hidden" id="158">
+   <BOUNDS type="Node" left="855" top="6615" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname=".. To [" slicecount="1" values="9">
+   </PIN>
+   <PIN pinname="[ From .." slicecount="1" values="7">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="159">
+   <BOUNDS type="Node" left="270" top="6150" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="112" srcpinname="outputed value" dstnodeid="159" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Subtract (Value)" nodename="Subtract (Value)" componentmode="Hidden" id="160">
+   <BOUNDS type="Node" left="300" top="6645" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="159" srcpinname="OnChange" dstnodeid="160" dstpinname="Input 2">
+   <LINKPOINT x="172" y="6413">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="MidiNoteOut (Devices Bang)" filename="%VVVV%\lib\nodes\modules\Devices\MidiNoteOut (Devices Bang).v4p" nodename="MidiNoteOut (Devices Bang)" componentmode="Hidden" id="161">
+   <BOUNDS type="Node" left="1215" top="5985" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Channel" visible="1">
+   </PIN>
+   <PIN pinname="Note" slicecount="1" values="94">
+   </PIN>
+   <PIN pinname="Velocity" visible="1">
+   </PIN>
+   <PIN pinname="Midi Output Port" visible="1">
+   </PIN>
+   <PIN pinname="Do Send" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="158" srcpinname="Output" dstnodeid="161" dstpinname="Channel">
+   </LINK>
+   <LINK srcnodeid="112" srcpinname="outputed value" dstnodeid="161" dstpinname="Velocity">
+   </LINK>
+   <LINK srcnodeid="72" srcpinname="Output Enum" dstnodeid="161" dstpinname="Midi Output Port">
+   </LINK>
+   <LINK srcnodeid="159" srcpinname="OnChange" dstnodeid="161" dstpinname="Do Send">
+   </LINK>
+   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="162">
+   <BOUNDS type="Node" left="3015" top="3030" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="SpoutSenderName" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="163">
+   <BOUNDS type="Node" left="5115" top="3105" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="SpoutSenderName" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="22" srcpinname="Output String" dstnodeid="163" dstpinname="SpoutSenderName">
+   </LINK>
+   <LINK srcnodeid="163" srcpinname="Texture" dstnodeid="43" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Output String" dstnodeid="162" dstpinname="SpoutSenderName">
+   </LINK>
+   <LINK srcnodeid="162" srcpinname="Texture" dstnodeid="42" dstpinname="Input Node">
    </LINK>
    </PATCH>
